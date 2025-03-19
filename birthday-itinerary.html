@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy's 42nd Birthday Celebration - Forestville Getaway</title>
+    <style>
+        :root {
+            --primary-color: #8e44ad;
+            --secondary-color: #9b59b6;
+            --accent-color: #d5b8ff;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --danger-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f9f7fe;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        
+        .date-badge {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin: 20px 0 10px 0;
+            font-size: 1.4rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        
+        .highlight {
+            background-color: var(--accent-color);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .day-label {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .excluded {
+            opacity: 0.6;
+        }
+        
+        .excluded h4 {
+            text-decoration: line-through;
+        }
+        
+        .rating {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            margin: 40px 0;
+            border: none;
+        }
+        
+        .location {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .location svg {
+            margin-right: 8px;
+        }
+        
+        .schedule {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .schedule svg {
+            margin-right: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: var(--dark-color);
+            font-size: 0.9rem;
+        }
+        
+        .balloon-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="balloon-container">🎈</div>
+        <h1>Amy's 42nd Birthday Celebration</h1>
+        <div class="subtitle">A Forestville Wine Country Getaway</div>
+        <div class="date-badge">March 19-20, 2025</div>
+    </header>
+    
+    <div class="container">
+        <div class="day-label">Wednesday - March 19, 2025</div>
+        
+        <h2>Breakfast Options</h2>
+        <div class="card">
+            <div class="card-header">Tower Cafe</div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Opens: 8:00 AM
+            </div>
+            <ul>
+                <li><strong>Breakfast:</strong> Yes (globally inspired dishes like Oaxacan Eggs Mole and French Toast)</li>
+                <li><strong>Full Bar:</strong> Yes (Tower Bloody Mary, jalapeño-raspberry cocktails, beer/wine)</li>
+                <li><strong>Note:</strong> Quirky, eclectic atmosphere with lush patio seating</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Cafeteria 15L</div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Opens: 9:00 AM
+            </div>
+            <ul>
+                <li><strong>Breakfast:</strong> Yes (brunch classics like Mexican Skillet and Brioche French Toast)</li>
+                <li><strong>Full Bar:</strong> Yes (bottomless mimosas, craft cocktails, and a full liquor selection)</li>
+                <li><strong>Note:</strong> Trendy downtown spot with outdoor seating</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Café Bernardo R15</div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Opens: 8:00 AM (breakfast hours: Monday–Thursday 8 AM – 11 AM)
+            </div>
+            <ul>
+                <li><strong>Breakfast:</strong> Yes (seasonal menu with dishes like Breakfast Burritos and Avocado Toast)</li>
+                <li><strong>Full Bar:</strong> Yes (craft cocktails, beer, wine, and Bloody Marys available during breakfast)</li>
+                <li><strong>Atmosphere:</strong> Industrial-chic space with pool tables and a lively downtown vibe</li>
+            </ul>
+        </div>
+        
+        <div class="excluded">
+            <h4>Excluded Options</h4>
+            <ul>
+                <li><strong>Nopalitos</strong> - Opens at 6:30 AM but beer only (no full bar)</li>
+                <li><strong>The Morning Fork</strong> - Opens at 8:00 AM but serves mimosas only (no full bar)</li>
+                <li><strong>Orphan</strong> - Opens at 7:00 AM but cash-only and no alcohol beyond coffee</li>
+            </ul>
+        </div>
+        
+        <hr class="divider">
+        
+        <h2>Wine Tasting Activities</h2>
+        
+        <div class="card">
+            <div class="card-header">Russian River Vineyards</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                Forestville, CA (on CA-116)
+            </div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Open 12:00–5:00 PM (last tasting at 4:00 PM)
+            </div>
+            <div class="rating">★★★★☆ 4.2 (508 reviews on Yelp) | ★★★★★ 4.7 (95 reviews on Google)</div>
+            
+            <h4>Highlights:</h4>
+            <ul>
+                <li>Voted "Best Tasting Room" in Sonoma County</li>
+                <li>Attached restaurant (Corks) for lunch pairings (try the duck confit flatbread)</li>
+                <li>Dog-friendly outdoor seating</li>
+                <li>Casual outdoor patio with live music (weekends)</li>
+            </ul>
+            
+            <div class="highlight">
+                <strong>Logistics:</strong>
+                <ul>
+                    <li>Arrive at 12:15 PM for a leisurely tasting and lunch</li>
+                    <li>Depart by 2:30 PM for a 10-minute drive to your Airbnb</li>
+                    <li><strong>Reservations:</strong> Strongly recommended</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Kistler Vineyards</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                Forestville, CA (Trenton Roadhouse)
+            </div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Open 9:00 AM – 5:00 PM (Wednesday) by appointment only
+            </div>
+            <div class="rating">★★★★★ 4.8 (18 reviews on Yelp) | ★★★★★ 4.9 (22 reviews on Google)</div>
+            
+            <h4>Highlights:</h4>
+            <ul>
+                <li>Award-winning Chardonnay and Pinot Noir in a historic barn setting</li>
+                <li>Private, educational tastings with vineyard tours</li>
+                <li><strong>Reservations:</strong> Mandatory</li>
+            </ul>
+        </div>
+        
+        <h3>Wine Cave Experiences</h3>
+        
+        <div class="card">
+            <div class="card-header">Bella Vineyards & Wine Caves</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                Healdsburg (25 minutes from Forestville)
+            </div>
+            
+            <h4>Highlights:</h4>
+            <ul>
+                <li>7,000 sq ft of caves beneath Lily Hill Vineyard</li>
+                <li>Seated tastings in the cave amid Zinfandel barrels</li>
+            </ul>
+            
+            <h4>Bella Tour | Immersive Winery Experience - $95 per person</h4>
+            <p>Take a trip through the magical depths of the wine caves while tasting the BEST of Bella. Go behind-the-scenes as you explore the winemaking side on the crushpad and in the vineyard. Follow the smell of fermenting and aging wine into the wine caves, where you will sample small-lot zins amongst the wine barrels. Immerse yourself in wine knowledge with your wine expert and gain access to club-only wines including small-lot zinfandels and library wines.</p>
+            
+            <h4>Seated Wine Tasting - $35 per person</h4>
+            <p>Join us for a seated wine tasting at Bella Vineyards + Wine Caves! Select from an underground tasting, featuring our top-rated wines in the magical wine caves, or outside on the Bella lawn overlooking Lily Hill.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Thomas George Estates</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                Healdsburg (30 minutes from Forestville)
+            </div>
+            
+            <h4>Highlights:</h4>
+            <ul>
+                <li>Lavish 8,000 sq ft labyrinthine caves with chandeliers</li>
+                <li>Private tastings or dinners in the volcanic rock-lined dining room</li>
+            </ul>
+        </div>
+        
+        <hr class="divider">
+        
+        <h2>Additional Wineries to Consider</h2>
+        
+        <div class="card">
+            <div class="card-header">Hartford Family Winery</div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Hours: 10:00 AM – 4:30 PM (appointment only)
+            </div>
+            <div class="rating">★★★★☆ 4.2 (107 reviews on Yelp) | ★★★★★ 4.7 (95 reviews on Google)</div>
+            <ul>
+                <li>Single-vineyard Pinot Noir and Chardonnay</li>
+                <li>Rustic barn setting with vineyard views</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Joseph Jewell Wines</div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Hours: 11:00 AM – 5:00 PM (Wednesday–Sunday)
+            </div>
+            <div class="rating">★★★★★ 4.8 (47 reviews on Yelp) | ★★★★★ 4.8 (66 reviews on Google)</div>
+            <ul>
+                <li>Affordable, value-driven Pinot Noir</li>
+                <li>Laid-back tasting room in downtown Forestville</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Iron Horse Vineyards</div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Hours: 10:00 AM – 4:30 PM
+            </div>
+            <div class="rating">★★★★☆ 4.1 (437 reviews on Yelp) | ★★★★★ 4.7 (95 reviews on Google)</div>
+            <ul>
+                <li>Iconic sparkling wines (served at White House events)</li>
+                <li>Scenic outdoor tastings with vineyard views</li>
+            </ul>
+        </div>
+        
+        <hr class="divider">
+        
+        <div class="day-label">Thursday - March 20, 2025</div>
+        
+        <h2>Breakfast Options</h2>
+        
+        <div class="card">
+            <div class="card-header">Tiny Town Cafe</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                6544 Front St, Forestville, CA 95436
+            </div>
+            <div class="rating">★★★★★ 4.7 (123 reviews on Google)</div>
+            <p><strong>Highlights:</strong> Known for its cozy atmosphere, great coffee, and fresh breakfast options like burritos and sandwiches. Offers both takeout and dine-in services.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Sunshine Coffee Roasters (Roasters Espresso Bar)</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                6656 Front St, Forestville, CA 95436
+            </div>
+            <div class="rating">★★★★★ 4.6 (146 reviews on Yelp)</div>
+            <p><strong>Highlights:</strong> A casual and trendy espresso bar with outdoor seating, perfect for a quick breakfast or coffee. Popular among college students and laptop workers.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Willow Wood Market Cafe</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                9020 Graton Rd, Graton, CA 95444
+            </div>
+            <div class="rating">★★★★★ 4.5 (300+ reviews on Yelp)</div>
+            <p><strong>Highlights:</strong> Offers a farm-to-table breakfast experience with dishes like polenta and eggs. Known for its cozy vibe and local ingredients.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Farmstand at Farmhouse Inn</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                7871 River Rd, Forestville, CA 95436
+            </div>
+            <div class="rating">★★★★★ 4.7 (100+ reviews on Yelp)</div>
+            <p><strong>Highlights:</strong> A farm-to-table restaurant offering fresh and seasonal breakfast options. Perfect for a leisurely meal with a wine country view.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">The Farmhand</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                6542 Front St, Forestville, CA 95436
+            </div>
+            <div class="rating">★★★★★ 4.6 (80+ reviews on Yelp)</div>
+            <p><strong>Highlights:</strong> Known for its artisanal breakfast dishes and locally sourced ingredients. Offers a cozy, rustic atmosphere.</p>
+        </div>
+        
+        <h2>Afternoon Relaxation</h2>
+        
+        <div class="card highlight">
+            <div class="card-header">Massage Appointment</div>
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                </svg>
+                Osmosis Day Spa Sanctuary, 209 Bohemian Hwy, Freestone 95472 CA
+            </div>
+            <div class="schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                </svg>
+                Thu Mar 20, 2025 2:45pm – 4:15pm
